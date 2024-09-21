@@ -1,0 +1,106 @@
+.compiler-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+
+.compiler-box .compiler-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  line-height: 10px;
+  padding-bottom: 1rem;
+}
+
+.compiler-box .compiler-header select,
+.compiler-box .compiler-header select option {
+  margin: 0;
+  text-align: center;
+  padding: 1rem;
+  min-width: 200px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.compiler-box .code,
+.compiler-box .result {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+.loader-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.5s linear infinite;
+  align-self: center;
+}
+
+.compiler-body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+}
+
+.compiler-body,
+.code-editor {
+  gap: 1rem;
+}
+
+.compiler-body .code-editor {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.compiler-body .code-editor textarea {
+  height: 100%;
+  font-size: 18px;
+  color: #eee;
+  font-family: monospace;
+  padding: 0.5rem;
+}
+
+.compiler-body .result {
+  color: #333;
+  font-size: 18px;
+  padding: 1rem;
+  flex: 1;
+}
+
+.compiler-body .result.error {
+  color: #f00;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lang-select .lang-option,
+.lang-select label {
+  padding: 1rem;
+  font-size: 18px;
+  color: #eee;
+}
